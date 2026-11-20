@@ -1,17 +1,20 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
+        List<Book> bookList = new ArrayList<>();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
+        bookList.add(new Book("George Orwell", "1984", "918237326"));
+        bookList.add(new Book("J.K Rowling", "Harry Potter and the philospher's stone", "9182341326"));
+        bookList.add(new Book("George R.R Martin", "Game of thrones - Dance of the dragons", "918212041326"));
+
+        for (Book book : bookList) {
+            System.out.println(book);
+            System.out.println();
         }
+
     }
 }
