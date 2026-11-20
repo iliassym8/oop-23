@@ -32,6 +32,6 @@ public record Book(String author, String title, String isbn, List<Rating> rating
 
     @Override
     public String toString() {
-        return "Title: " + title() + "\n" + "Author: " + author() + "\n" + "ISBN: " + isbn() + "\n" + "Rating: " + getRatingAvergae();
+        return "Title: " + title() + "\n" + "Author: " + author() + "\n" + "ISBN: " + isbn() + "\n" + "Rating: " + String.format("%.2f", getRatingAvergae());
     }
 }
